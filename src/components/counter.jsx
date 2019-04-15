@@ -69,6 +69,7 @@ export default class Counter extends Component {
             <div>{this.state.tags.length === 0 && "Please create a new tag!"}</div> */}
             {/* {this.props.children} */}
             <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
+            <span className={this.getBadgeClasses()}>{this.props.counter.name}</span>
             <button 
                 // onClick={ (product) => {this.handleIncrement(product)}} 
                 onClick={() => this.props.onIncrement(this.props.counter)}

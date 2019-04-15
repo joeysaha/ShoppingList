@@ -8,19 +8,23 @@ class App extends Component {
   state = {
     counters: [{
         id: 1,
-        value: 4
+        value: 4,
+        name: 'aaaa'
       },
       {
         id: 2,
-        value: 0
+        value: 0,
+        name: 'bbbb'
       },
       {
         id: 3,
-        value: 0
+        value: 0,
+        name: 'cccc'
       },
       {
         id: 4,
-        value: 0
+        value: 0,
+        name: 'dddd'
       }
     ]
   };
