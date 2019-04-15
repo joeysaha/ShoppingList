@@ -36,6 +36,9 @@ export default class Counter extends Component {
     render() { 
         // this.getBadgeClasses();
         // console.log('props', this.props);
+
+        console.log('Counter - Rendered');
+        
         
         return (
           <div>
