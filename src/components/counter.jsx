@@ -33,6 +33,19 @@ export default class Counter extends Component {
     //     this.setState({value: this.state.value + 1});
     // };
 
+    componentDidUpdate(prevProps, prevState) {
+        console.log('prevProps', prevProps);
+        console.log('prevState', prevState);
+        if (prevProps.counter.value !== this.props.counter.value) {
+            // Ajax call and get new data from the server
+        }
+    }
+
+    componentWillUnmount() {
+        console.log('Counter - ');
+        // Prevents memory leaks
+    }
+
     render() { 
         // this.getBadgeClasses();
         // console.log('props', this.props);
