@@ -50,7 +50,7 @@ export default class Counter extends Component {
         // this.getBadgeClasses();
         // console.log('props', this.props);
 
-        console.log('Counter - Rendered');
+        // console.log('Counter - Rendered');
         
         
         return (
@@ -73,9 +73,15 @@ export default class Counter extends Component {
             <button 
                 // onClick={ (product) => {this.handleIncrement(product)}} 
                 onClick={() => this.props.onIncrement(this.props.counter)}
-                className="btn btn-secondary btn-sm"
+                className={this.getButtonClassName()}
             >
                 Increment
+            </button>
+            <button
+                onClick={() => this.props.onDecrement(this.props.counter)}
+                className={this.getButtonClassName()}
+            >
+                Decrement
             </button>
             <button 
                 onClick={() => this.props.onDelete(this.props.counter.id)} 
@@ -86,6 +92,10 @@ export default class Counter extends Component {
           </div>
         );
     };
+
+    getButtonClassName() {
+        return "btn btn-secondary btn-sm m-2"
+    }
 
     getBadgeClasses() {
         let classes = "badge m-2 badge-";
